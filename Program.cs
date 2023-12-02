@@ -2,15 +2,8 @@
 
 internal class Program {
     private static void Main(string[] args) {
-        Solution currentSolution = new SolutionDay01();
-
-        Console.WriteLine("Advent of Code 2023 Solver");
-        Console.WriteLine($"Running solution'{currentSolution.GetType().Name}'. Which part should be run? [1,2,...]");
-        string? partString = Console.ReadLine();
-        if (!int.TryParse(partString, out int part)) {
-            Console.WriteLine("Part has to be a number!");
-            return;
-        }
+        Solution currentSolution = new SolutionDay02();
+        int part = 2;
         switch (part) {
             case 1:
                 currentSolution.SolvePart1();
