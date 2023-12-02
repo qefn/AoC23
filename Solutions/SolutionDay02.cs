@@ -3,15 +3,15 @@ using System.Text.RegularExpressions;
 namespace AoC23.Solutions {
     public class SolutionDay02 : Solution {
         public override void SolvePart1() {
-            // List<string> input = ReadInputFile("Day2TestInput1");
-            List<string> input = ReadInputFile("Day2Input1");
+            // List<string> input = ReadInputFile("Day02TestInput1");
+            List<string> input = ReadInputFile("Day02Input1");
             int result = input.Sum(IsGamePossible);
             Console.WriteLine($"Result: {result}");
         }
 
         public override void SolvePart2() {
-            //List<string> input = ReadInputFile("Day2TestInput1");
-            List<string> input = ReadInputFile("Day2Input1");
+            //List<string> input = ReadInputFile("Day02TestInput1");
+            List<string> input = ReadInputFile("Day02Input1");
             int result = input.Sum(CalculatePower);
             Console.WriteLine($"Result: {result}");
         }

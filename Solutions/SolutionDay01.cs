@@ -1,7 +1,7 @@
 namespace AoC23.Solutions;
 public class SolutionDay01 : Solution {
     public override void SolvePart1() {
-        List<string> input = ReadInputFile("Day1Input1");
+        List<string> input = ReadInputFile("Day01Input1");
         int result = input.Select(line => new Tuple<char, char>(line.First(c => char.IsDigit(c)), line.Last(c => char.IsDigit(c)))).Sum(t => int.Parse(t.Item1.ToString() + t.Item2.ToString()));
         Console.WriteLine($"The result is: {result}");
     }
@@ -18,8 +18,8 @@ public class SolutionDay01 : Solution {
         numberTextMap.Add(8, "eight");
         numberTextMap.Add(9, "nine");
 
-        List<string> input = ReadInputFile("Day1Input1");
-        // List<string> input = ReadInputFile("Day1TestInput2");
+        List<string> input = ReadInputFile("Day01Input1");
+        // List<string> input = ReadInputFile("Day01TestInput2");
         int result = 0;
         for (int i = 0; i < input.Count; i++) {
             string line = input[i];
