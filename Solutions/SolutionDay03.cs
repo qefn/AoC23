@@ -29,7 +29,7 @@ public class SolutionDay03 : Solution {
         List<string> input = ReadInputFile("Day03Input1");
         char[][] schematic = GetSchematic(input);
         List<PartNumber> partNumbers = GetPartNumbers(schematic);
-        List<int> gearRations = new();
+        List<int> gearRatios = new();
 
         for (int y = 0; y < schematic.Length; y++) {
             char[] line = schematic[y];
@@ -40,12 +40,12 @@ public class SolutionDay03 : Solution {
                 }
                 List<PartNumber> matchingParts = partNumbers.Where(p => p.Area.Contains(x, y)).ToList();
                 if (matchingParts.Count == 2) {
-                    gearRations.Add(matchingParts[0].Number * matchingParts[1].Number);
+                    gearRatios.Add(matchingParts[0].Number * matchingParts[1].Number);
                 }
             }
         }
 
-        Console.WriteLine($"Sum of all gear ratios: {gearRations.Sum()}");
+        Console.WriteLine($"Sum of all gear ratios: {gearRatios.Sum()}");
     }
 
     private static List<PartNumber> GetPartNumbers(char[][] schematic) {
