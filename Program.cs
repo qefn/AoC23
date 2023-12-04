@@ -2,7 +2,7 @@
 
 internal class Program {
     private static void Main(string[] args) {
-        Solution currentSolution = new SolutionDay03();
+        Solution currentSolution = new SolutionDay04();
         Console.WriteLine($"Solving {currentSolution.GetType().Name}:");
         Console.WriteLine($"Part 1:\r\n");
         currentSolution.SolvePart1();
